@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form example</title>
+</head>
+<body>
+  <form action="/login" method="post">
+    <div>
+      <label for="userEmail">email</label>
+      <input type="email" id="userEmail" name="userEmail">
+    </div>
+    <button type="button">show password</button>
+    <div>
+      <label for="userPwd">password</label>
+      <input type="password" id="userPwd" name="password">
+    </div>
+    <hr>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo 🔍</option>
+      <option value="saab">Saab 💚</option>
+    </select>
+    <hr>
+    <fieldset>
+      <legend>Example:</legend>
+      <div>
+        <label for="name">name</label>
+        <input type="text" id="name" name="name">
+      </div>
+    </fieldset>
+
+    <hr>
+    <fieldset>
+      <legend>Fav programming lang</legend>
+      <label for="javascript">Javascript</label>
+      <input type="radio" name="favProgram" id="javascript" value="js">
+      <label for="python">python</label>
+      <input type="radio" name="favProgram" id="python" value="py">
+      <label for=".NET">.NET</label>
+      <input type="radio" name="favProgram" id=".NET" value="👎">
+    </fieldset>
+
+    <fieldset>
+      <legend>Checkboxes</legend>
+      <label for="vehicle1">I have a bike</label>
+      <input type="checkbox" id="vehicle1" name="vehicle" value="bike">
+      <label for="vehicle2">I have a car</label>
+      <input type="checkbox" id="vehicle2" name="vehicle" value="boat">
+    </fieldset>
+
+    <fieldset>
+      <legend>Extra input types</legend>
+      <label for="color">Select color</label>
+      <input type="color" name="color" id="color">
+    </fieldset>
+
+    <div>
+      <label for="date">Select a date</label>
+      <input type="date" id="date" name="date" min="2022-03-22">
+      <!-- <input type="datetime-local"> -->
+    </div>
+    <input type="hidden" name="csrf" value="hiddenValue">
+    <input type="submit" value="login">
+    <!--
+      <div>
+        <label for="termsAndCondition">Acepta los terminos</label>
+        <input type="checkbox" id="termsAndCondition">
+      </div>
+    -->
+  </form>
+</body>
+</html>
