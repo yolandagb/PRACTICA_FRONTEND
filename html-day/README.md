@@ -21,14 +21,14 @@ We learn how to use HTML, basic tags, attributes and links. In this [file](https
 
 ## 3. Semantic HTML
 
-We learn a few semantic tags. In this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/basic-tags/index.html) you can see the code we saw in the class.
+We learn a few semantic tags. In this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/semantic-html/index.html) you can see the code we saw in the class.
 
 - [Semantic html](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [Semantic html mdn docs](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 
 ## 4. HTML Forms
 
-We learn a how html forms and their validation works. In this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/basic-tags/index.html) you can see the code we saw in the class.
+We learn a how html forms and their validation works. In this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/form-validation-html/index.html) you can see the code we saw in the class.
 
 - [Client side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [Form w3school](https://www.w3schools.com/html/html_forms.asp)
@@ -90,11 +90,11 @@ When we use `srcset` we define when we want to display an image based on the pix
 >
 ```
 
-The class example is in this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/basic-tags/index.html).
+The class example is in this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/responsive-images/index.html).
 
 **External resources**
 
-- [Responsive images](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/basic-tags/index.html).
+- [Responsive images](https://web.dev/learn/design/responsive-images/).
 
 ## 6. Open graph tags
 
@@ -115,7 +115,7 @@ Example of Open graph tags:
 
 We remark that for assets (images/videos) it is important to use the absolute URL with the domain.
 
-The class example is in this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/basic-tags/index.html).
+The class example is in this [file](https://github.com/KeepCoding-FAM-Expleo-2022/curso-frontend/blob/main/html-day/semantic-html/index.html).
 
 **External resources**
 
