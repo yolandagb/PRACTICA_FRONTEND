@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive images</title>
+</head>
+<body>
+  <!-- 0px         450px-> 2º source    800px-> 1º source     ♾px -->
+  <!-- |------------------------------------------------------ -> -->
+  <!--
+  <picture>
+    <source
+      media="(min-width: 800px)"
+      srcset="
+        https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/head.jpg,
+        https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/head-2x.jpg 2x
+      "
+    >
+    <source
+      media="(min-width: 450px)"
+      srcset="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/head-small.jpg"
+    >
+    <img
+      src="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/head-fb.jpg"
+      alt="a head carved out of wood"
+    >
+  </picture>
+  -->
+  <!-- (vw / (descriptor / sizes))) close to DP -->
+  <img
+    src="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-200.jpg"
+    sizes="50vw"
+    srcset="
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-100.jpg 100w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-200.jpg 200w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-400.jpg 400w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-800.jpg 800w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-1000.jpg 1000w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-1400.jpg 1400w,
+      https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/lighthouse-1800.jpg 1800w"
+    alt="a lighthouse"
+  >
+</body>
+</html>
