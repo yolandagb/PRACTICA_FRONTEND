@@ -10,9 +10,26 @@
   <form action="/login" method="post">
     <div>
       <label for="userEmail">email</label>
-      <input type="email" id="userEmail" name="userEmail">
+      <input
+        type="email"
+        required
+        id="userEmail"
+        name="userEmail"
+        placeholder="add your email"
+      >
     </div>
     <button type="button">show password</button>
+    <div>
+      <label for="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]+"
+        title="please enter only numbers"
+        maxlength="9" required minlength="8"
+      >
+    </div>
     <div>
       <label for="userPwd">password</label>
       <input type="password" id="userPwd" name="password">
@@ -35,7 +52,7 @@
     <fieldset>
       <legend>Fav programming lang</legend>
       <label for="javascript">Javascript</label>
-      <input type="radio" name="favProgram" id="javascript" value="js">
+      <input type="radio" name="favProgram" id="javascript" checked value="js">
       <label for="python">python</label>
       <input type="radio" name="favProgram" id="python" value="py">
       <label for=".NET">.NET</label>
@@ -58,11 +75,31 @@
 
     <div>
       <label for="date">Select a date</label>
-      <input type="date" id="date" name="date" min="2022-03-22">
+      <input type="date" id="date" name="date" min="2022-03-22" />
       <!-- <input type="datetime-local"> -->
     </div>
+
+    <div>
+      <label for="expenses">Expenses</label>
+      <input
+        name="expenses"
+        id="expenses"
+        type="number"
+        placeholder="add expenses"
+        required
+        value="1000"
+        min="1000"
+        step="100"
+        data-errorMessage="complete este campo"
+      />
+    </div>
+
     <input type="hidden" name="csrf" value="hiddenValue">
     <input type="submit" value="login">
+
+    <dialog>
+      <p>Hi modal!</p>
+    </dialog>
     <!--
       <div>
         <label for="termsAndCondition">Acepta los terminos</label>
