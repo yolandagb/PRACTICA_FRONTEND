@@ -108,9 +108,19 @@ body {
 }
 
 /* --- media queries --- */
-@media (min-width: 468px) and (max-width: 720px) {
-	* {
-		color: red !important;
+@media (min-width: 768px) {
+	.content {
+		display: flex;
+		justify-content: space-between;
+	}
+	.aside {
+		width: 15%;
+	}
+	.shows-container {
+		width: 80%;
+	}
+	.shows-container .show-items {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
