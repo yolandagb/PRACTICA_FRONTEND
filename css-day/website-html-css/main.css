@@ -1,0 +1,18 @@
+/* --- footer --- */
+.footer {
+  font-style: italic;
+  text-align: center;
+  background-color: #4c4ae6;
+  color: #fff;
+	/* margin, padding, border */
+	/* border: 2px solid red; */
+	padding-top: 30px;
+	padding-bottom: 30px;
+	/* atajo 1 */
+	padding: 30px 0 30px 0;
+	/* atajo 2 */
+	padding: 30px 0;
+	/* ---------- */
+	margin-top: 20px;
+	margin: 20px 0 0 0;
+}
