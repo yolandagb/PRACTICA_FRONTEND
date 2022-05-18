@@ -1,0 +1,32 @@
+h1 {
+  color: black !important;
+}
+/* Selectores */
+/* 1. tag */
+footer {
+  /* color: darkgreen; */
+  color: blueviolet;
+}
+/* 2. classes */
+.my-section {
+  background-color: aqua;
+}
+.my-section .cabecera .title {
+  font-style: italic;
+  font-weight: 100;
+}
+.my-section .title {
+  font-style: italic;
+  font-weight: 700;
+}
+.title {
+  font-weight: 400;
+}
+/* 3. ids */
+#header3 {
+  color: blue;
+}
+
+#header3 {
+  color: red;
+}
