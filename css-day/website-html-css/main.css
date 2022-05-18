@@ -65,12 +65,27 @@ body {
 }
 
 .shows-container .show-items {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+	/* solucion con flexbox */
+	/* display: flex;
+	flex-wrap: wrap; */
+	/* justify-content: space-between; */
 }
 
 .show-items .show-item {
-	width: 50%;
+	/* solucion con calc */
+	/* width: calc(50% - 10px);
+	margin-right: 5px; */
+	/* solucion con justify content */
+	/* width: 30%; */
+}
+
+.show-item .image-container {
+	margin-bottom: 10px;
+	max-height: 192px;
+	overflow: hidden;
 }
 
 .shows-container .show-item .image-container img {
