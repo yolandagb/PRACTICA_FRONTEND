@@ -52,3 +52,28 @@ body {
 	margin: 20px 0 0 0;
 }
 /* --- show list --- */
+/* 
+  1em -> 16px
+	1rem -> 16px
+	rem -> normalmente para las font-size
+	em -> para espaciados
+*/
+.shows-container h2 {
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.shows-container .show-items {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.show-items .show-item {
+	width: 50%;
+}
+
+.shows-container .show-item .image-container img {
+	width: 100%;
+}
+
