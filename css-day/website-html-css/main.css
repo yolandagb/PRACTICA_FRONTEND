@@ -107,6 +107,10 @@ body {
 	padding: 5px 0;
 }
 
+.summary {
+	width: 10px;
+	transition: all .3s linear;
+}
 /* --- media queries --- */
 @media (min-width: 768px) {
 	.content {
@@ -121,6 +125,13 @@ body {
 	}
 	.shows-container .show-items {
 		grid-template-columns: repeat(4, 1fr);
+	}
+	.summary {
+		cursor: pointer;
+		width: 80px;
+	}
+	.summary:hover {
+		background-color: rgb(32, 32, 32);
 	}
 }
 
