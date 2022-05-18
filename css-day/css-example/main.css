@@ -8,10 +8,18 @@ footer {
   color: blueviolet;
 }
 /* 2. classes */
+.container {
+  margin-top: 50px;
+}
+
+.my-section.container {
+  margin-top: 75px;
+}
+
 .my-section {
   background-color: aqua;
 }
-.my-section .cabecera .title {
+.my-section .cabecera > .title {
   font-style: italic;
   font-weight: 100;
 }
