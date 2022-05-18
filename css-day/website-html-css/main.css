@@ -27,6 +27,12 @@ body {
 	/* Valor fijo mejor no usarlo. Usar flex para alinear */
 	/* padding-top: 20px; */
 }
+/* --- main content --- */
+.main-content {
+	width: 90%;
+	margin: 10px auto;
+	max-width: 920px;
+}
 /* --- footer --- */
 .footer {
   font-style: italic;
