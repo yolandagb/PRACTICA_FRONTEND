@@ -91,4 +91,32 @@ body {
 .shows-container .show-item .image-container img {
 	width: 100%;
 }
+/* -- aside -- */
+.summary {
+	padding: 10px;
+	background-color: rgb(62, 62, 62);
+	color: var(--main-white-color);
+	border-radius: 5px;
+}
+
+.anime-list {
+	margin: 10px 0 20px 0;
+}
+
+.anime-list li {
+	padding: 5px 0;
+}
+
+/* --- media queries --- */
+@media (min-width: 468px) and (max-width: 720px) {
+	* {
+		color: red !important;
+	}
+}
+
+@media print {
+	* {
+		color: blue !important;
+	}
+}
 
