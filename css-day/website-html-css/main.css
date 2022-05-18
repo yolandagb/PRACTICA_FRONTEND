@@ -3,6 +3,9 @@
 	--main-white-color: #FFF;
 	--footer-padding: 30px 0 30px 0;
 }
+body {
+	font-family: 'Raleway', Helvetica, sans-serif;
+}
 /* --- footer --- */
 .footer {
   font-style: italic;
