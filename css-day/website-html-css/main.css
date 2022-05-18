@@ -6,6 +6,27 @@
 body {
 	font-family: 'Raleway', Helvetica, sans-serif;
 }
+/* --- navbar --- */
+.navbar {
+	background-color: var(--main-primary-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+.navbar .img-container img {
+	width: 100%;
+}
+.navbar .img-container {
+	width: 50px;
+}
+.navbar a {
+	color: var(--main-white-color);
+	text-decoration: none;
+	/* Valor fijo mejor no usarlo. Usar flex para alinear */
+	/* padding-top: 20px; */
+}
 /* --- footer --- */
 .footer {
   font-style: italic;
