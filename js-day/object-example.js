@@ -15,6 +15,8 @@ const player = {
 // console.log(player.name);
 // console.log(player.team);
 // console.log(player.stats);
+// const key = 'active';
+// console.log(player[key]);
 // console.log(player.stats['play-offs']);
 
 player.stats.color = 'blue';
@@ -60,7 +62,7 @@ const playerD = {
 // console.log(playerD);
 const basicInfo = {
   name: 'User1',
-  email: 'test@test.com'
+  email: 'test@test.com',
 };
 const extraInfo = {
   phone: 92938123,
@@ -71,10 +73,10 @@ const extraInfo = {
 const expectedResult = {
   ...basicInfo,
   ...extraInfo,
-  // name: 'User1',
   // email: 'test@test.com',
   // phone: 92938123,
   // city: 'Madrid',
+  // name: '????',
 };
 // console.log(expectedResult);
 const goldenStateMainRoster = [playerB, playerC]

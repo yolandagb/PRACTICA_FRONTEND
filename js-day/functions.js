@@ -23,16 +23,16 @@ const foo3 = () => {
 
 // parametros
 const suma = (num1, num2) => {
-  const result = num1 + num2;
-  return num1 + num2;
-};
+  return num1 + num2
+}
 
 // const sumaRefactor = (num1, num2) => console.log(num1, num2) || (
 //  num1 + num2
 // );
 // funcion suma post refactor
-
-const sumaRefactor = (num1, num2) => num1 + num2;
+const sumaRefactor = (num1, num2) => (
+  num1 + num2
+)
 
 const sumaValue = sumaRefactor(1, 2);
 // console.log(sumaValue);
@@ -50,7 +50,7 @@ const user = (name, age) => {
     getName,
     getAge,
     userName,
-    userAge
+    userAge,
   };
 };
 
@@ -79,4 +79,3 @@ const multi3 = crearMultiplicadores(3);
 console.log(multi2(9));
 console.log(multi3(9));
 console.log(crearMultiplicadores(2)(9));
-

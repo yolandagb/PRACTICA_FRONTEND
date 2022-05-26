@@ -11,7 +11,7 @@ const includes = arr.includes(5);
 // console.log(includes);
 // 2 forma de difinir array
 const arr2 = ['pizza', 'burger', 'kebap'];
-const arr3 = [].concat(arr2);
+const arr3 = [].concat(arr2); // [...arr2]
 arr3.reverse();
 // console.log(arr3);
 

@@ -44,7 +44,7 @@ cadenaDeTexto = 'cambio';
 // console.log(typeof null); // object
 
 let myNumber = 123;
-// console.log(myNumber);
+// console.log(myNumber.toString());
 myNumber = 'lorem';
 // console.log(myNumber - 1);
 // console.log(typeof NaN);
@@ -64,7 +64,7 @@ ${firstText}
 // console.log(fullText);
 // console.log(templateText.trim());
 const id = 'd234-dg123-asd123-123';
-// console.log(id.split('-'));
+// console.log(id.split('-')); // ['d234', 'dg123', 'asd123', '123']
 const numberError = 1223;
 // console.log(numberError.split('2'));
 
