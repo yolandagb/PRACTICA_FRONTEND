@@ -65,3 +65,11 @@ result = result.join(' - ');
 // "PYTHON - JS"
 console.log(result);
 
+const simplifiedVersion = courses.filter((course) => (
+  course.students % 2 === 0
+)).map((course) => (
+  {
+    students: course.students,
+    module: course.module.toUpperCase(),
+  }
+)).map((course) => course.module).join(' - ')
