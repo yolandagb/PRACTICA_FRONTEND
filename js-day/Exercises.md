@@ -123,6 +123,29 @@ console.log(result)
 // ]
 ```
 
+Using the same filter result now we want the name of the modules transformed in uppercase
+
+```js
+// Result
+// [
+//   {
+//     students: 40,
+//     module: 'PYTHON',
+//   },
+//   {
+//     students: 20,
+//     module: 'JS'
+//   },
+// ]
+```
+
+Now we want to display them like this:
+
+```js
+// Result
+// "PYTHON - JS"
+```
+
 ---
 
 Create a function with two parameters, first one an object with keys and the second one an array with the keys we want to return.
