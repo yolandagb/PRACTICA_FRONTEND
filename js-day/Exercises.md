@@ -1,4 +1,4 @@
-## Javascrip Exercises
+## Javascrip Exercises
 
 create a function that receives one parameter and returns only two keys. Title, Description.
 
