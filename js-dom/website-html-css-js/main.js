@@ -44,15 +44,23 @@ const menuItems = [
   'Shingeky no kiokin',
 ];
 
-const createMenuItem = (name) => {
-  const li = document.createElement('li');
-  li.textContent = name;
-  return li;
+const addMenuListItems = (list) => {
+  const createMenuItem = (name) => {
+    const li = document.createElement('li');
+    li.textContent = name;
+    return li;
+  };
+  list.forEach((menuItem) => {
+    const liElement = createMenuItem(menuItem);
+    animeList.appendChild(liElement);
+  });
 };
-menuItems.forEach((menuItem) => {
-  const liElement = createMenuItem(menuItem);
-  animeList.appendChild(liElement);
-});
+
+addMenuListItems(menuItems);
+
+setTimeout(() => {
+  addMenuListItems(['k-on', 'bleach']);
+}, 3000);
 
 // heavy task
 // Eventos
