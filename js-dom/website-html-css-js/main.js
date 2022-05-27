@@ -95,38 +95,39 @@ const renderArticle = (name, url) => {
   mainListContent.appendChild(clone);
 };
 
-const data = [
-  {
-    name: 'Attack on Titan Season 3 Part 2',
-    image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104578-LaZYFkmhinfB.jpg',
-  },
-  {
-    name: 'FLCL',
-    image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx227-kxQ3PDHrrqp5.jpg',
-  },
-  {
-    name: 'THE END OF EVANGELION',
-    image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx32-i4ijZI4MuPiV.jpg',
-  },
-  {
-    name: 'The Slayers Next',
-    image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx535-xCRCSK8YG89S.png',
-  },
-  {
-    name: 'Death Note',
-    image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-lawCwhzhi96X.jpg',
-  },
-];
-
-data.forEach((menuItem) => {
-  renderArticle(menuItem.name, menuItem.image);
-});
-menuItems.forEach((item) => {
-  animeList.innerHTML += '<li>' + item + '</li>'
-});
-// renderizado innerHTML cada elemento
-setTimeout(() => {
-  menuItems.forEach((item) => {
-    animeList.innerHTML += `<li>${item}</li>`
+// menuItems.forEach((item) => {
+//   animeList.innerHTML += '<li>' + item + '</li>'
+// });
+// // renderizado innerHTML cada elemento
+// setTimeout(() => {
+//   menuItems.forEach((item) => {
+//     animeList.innerHTML += `<li>${item}</li>`
+//   });
+// }, 3000);
+/* --- render list --- */
+const getAnimeListAPI = async () => {
+  // GET
+  const response = await fetch('https://api.aniapi.com/v1/anime?per_page=10');
+  const payload = await response.json();
+  // const payload = await axios.get('/user?ID=12345');
+  // const data = 'a b c d';
+  // en código sincrono se puede poner await pero no tendría sentido
+  // const dataArray = await data.split(' ');
+  // console.log(dataArray);
+  let list = payload.data.documents;
+  list = list.map((anime) => {
+    return {
+      name: anime.titles.en,
+      image: anime.cover_image,
+    };
   });
-}, 3000);
+  renderList(list);
+};
+
+getAnimeListAPI();
+
+const renderList = (animes) => {
+  animes.forEach((menuItem) => {
+    renderArticle(menuItem.name, menuItem.image);
+  });
+};
