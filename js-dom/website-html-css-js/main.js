@@ -108,26 +108,35 @@ const renderArticle = (name, url) => {
 const getAnimeListAPI = async () => {
   // GET
   const response = await fetch('https://api.aniapi.com/v1/anime?per_page=10');
+  // const response = await fetch('https://api-football-standings.azharimm.site/leagues');
   const payload = await response.json();
   // const payload = await axios.get('/user?ID=12345');
   // const data = 'a b c d';
   // en código sincrono se puede poner await pero no tendría sentido
   // const dataArray = await data.split(' ');
   // console.log(dataArray);
+  // API Football
+  // let list = payload.data;
+  // list = list.map(item => ({
+  //   name: item.name,
+  //   image: item.logos.light,
+  // }));
+  // ANIME API
   let list = payload.data.documents;
-  list = list.map((anime) => {
+  list = list.map(anime => {
     return {
       name: anime.titles.en,
       image: anime.cover_image,
     };
   });
-  renderList(list);
+  return list;
 };
-
-getAnimeListAPI();
 
 const renderList = (animes) => {
   animes.forEach((menuItem) => {
     renderArticle(menuItem.name, menuItem.image);
   });
 };
+
+getAnimeListAPI() // es una promesa y las promesas tiene .then/.catch
+  .then(renderList);
