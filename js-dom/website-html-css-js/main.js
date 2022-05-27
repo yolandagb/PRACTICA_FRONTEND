@@ -105,9 +105,13 @@ const renderArticle = (name, url) => {
 //   });
 // }, 3000);
 /* --- render list --- */
-const getAnimeListAPI = async () => {
+const getAnimeListAPI = async (title) => {
   // GET
-  const response = await fetch('https://api.aniapi.com/v1/anime?per_page=10');
+  let filter = '';
+  if (title) {
+    filter = `&title=${title}`;
+  }
+  const response = await fetch(`https://api.aniapi.com/v1/anime?per_page=10${filter}`);
   // const response = await fetch('https://api-football-standings.azharimm.site/leagues');
   const payload = await response.json();
   // const payload = await axios.get('/user?ID=12345');
@@ -122,7 +126,11 @@ const getAnimeListAPI = async () => {
   //   image: item.logos.light,
   // }));
   // ANIME API
-  let list = payload.data.documents;
+  let list = [];
+  if (payload.data.documents) {
+    list = payload.data.documents;
+  }
+  // let list = payload.data.documents ? payload.data.documents : [];
   list = list.map(anime => {
     return {
       name: anime.titles.en,
@@ -155,11 +163,17 @@ const setErrorClass = (inputElement, inputGroupElement) => {
   }
 };
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const inputValue = event.target.search.value;
   console.log(event.target.search.validity);
   setErrorClass(event.target.search, searchInputGroup);
+  if (event.target.search.validity.valid) {
+    mainListContent.innerHTML = 'Loading....';
+    const animes = await getAnimeListAPI(inputValue);
+    mainListContent.innerHTML = '';
+    renderList(animes);
+  }
   // if (!event.target.search.validity.valid) {
   //   searchInputGroup.classList.add('error');
   // } else {
