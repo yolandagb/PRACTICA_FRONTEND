@@ -145,11 +145,13 @@ getAnimeListAPI() // es una promesa y las promesas tiene .then/.catch
 const form = document.getElementById('search-form');
 const searchInputGroup = document.querySelector('.input-container.search');
 
-const setErrorClass = (isValid, inputGroupElement) => {
-  if (isValid) {
+const setErrorClass = (inputElement, inputGroupElement) => {
+  const spanError = inputGroupElement.querySelector('.error-message');
+  if (inputElement.validity.valid) {
     inputGroupElement.classList.remove('error');
   } else {
     inputGroupElement.classList.add('error');
+    spanError.textContent = inputElement.dataset.message;
   }
 };
 
@@ -157,7 +159,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   const inputValue = event.target.search.value;
   console.log(event.target.search.validity);
-  setErrorClass(event.target.search.validity.valid, searchInputGroup);
+  setErrorClass(event.target.search, searchInputGroup);
   // if (!event.target.search.validity.valid) {
   //   searchInputGroup.classList.add('error');
   // } else {
@@ -166,9 +168,10 @@ form.addEventListener('submit', (event) => {
 });
 
 const searchInput = document.getElementById('search');
+console.log(searchInput.dataset);
 searchInput.addEventListener('keyup', (event) => {
   // const inputValue = event.target.value;
-  setErrorClass(event.target.validity.valid, searchInputGroup);
+  setErrorClass(event.target, searchInputGroup);
   // if (event.target.validity.valid) {
   //   searchInputGroup.classList.remove('error');
   // } else {
