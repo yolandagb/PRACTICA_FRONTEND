@@ -95,9 +95,9 @@ const renderArticle = (name, url) => {
   mainListContent.appendChild(clone);
 };
 
-// menuItems.forEach((item) => {
-//   animeList.innerHTML += '<li>' + item + '</li>'
-// });
+menuItems.forEach((item) => {
+  animeList.innerHTML += '<li>' + item + '</li>'
+});
 // // renderizado innerHTML cada elemento
 // setTimeout(() => {
 //   menuItems.forEach((item) => {
