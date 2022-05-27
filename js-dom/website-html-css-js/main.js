@@ -70,7 +70,6 @@ const listTemplate = (title) => {
 const teamplateList = [...menuItems, 'evangelion'].map((menuItem) => {
   return listTemplate(menuItem);
 }).join('');
-
 // animeList.innerHTML = teamplateList;
 
 // setTimeout(() => {
@@ -82,6 +81,10 @@ const articleTemplate = document.querySelector('#article');
 const mainListContent = document.getElementById('main-list-content');
 
 const renderArticle = (name, url) => {
+  // Esto renderizaba el template pero si quería añadir
+  // otros articles no me dejaba
+  // mainListContent.appendChild(articleTemplate.content);
+  // para poder solucionarlo usamos ".cloneNode(true)"
   const clone = articleTemplate.content.cloneNode(true);
   const figCaption = clone.querySelector('figcaption');
   const img = clone.querySelector('img');
