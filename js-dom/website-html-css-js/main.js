@@ -143,16 +143,35 @@ getAnimeListAPI() // es una promesa y las promesas tiene .then/.catch
 
 /* --- eventos --- */
 const form = document.getElementById('search-form');
+const searchInputGroup = document.querySelector('.input-container.search');
+
+const setErrorClass = (isValid, inputGroupElement) => {
+  if (isValid) {
+    inputGroupElement.classList.remove('error');
+  } else {
+    inputGroupElement.classList.add('error');
+  }
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const inputValue = event.target.search.value;
   console.log(event.target.search.validity);
-  if (!event.target.search.validity.valid) {
-    // todo error
-    form.classList.add('error');
-  } else {
-    // filtrar usando el API
-    form.classList.remove('error');
-  }
+  setErrorClass(event.target.search.validity.valid, searchInputGroup);
+  // if (!event.target.search.validity.valid) {
+  //   searchInputGroup.classList.add('error');
+  // } else {
+  //   searchInputGroup.classList.remove('error');
+  // }
+});
+
+const searchInput = document.getElementById('search');
+searchInput.addEventListener('keyup', (event) => {
+  // const inputValue = event.target.value;
+  setErrorClass(event.target.validity.valid, searchInputGroup);
+  // if (event.target.validity.valid) {
+  //   searchInputGroup.classList.remove('error');
+  // } else {
+  //   searchInputGroup.classList.add('error');
+  // }
 });

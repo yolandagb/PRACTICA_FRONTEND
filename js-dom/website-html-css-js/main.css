@@ -200,3 +200,18 @@ body {
 	box-shadow: none;
 	padding: 10px 12px;
 }
+/* error state */
+.section-form .input-container.error #search {
+	border-color: red;
+}
+
+.error-message {
+	margin-top: 5px;
+	font-size: 0.8rem;
+	display: none;
+}
+
+.section-form .input-container.error .error-message {
+	display: block;
+	color: red;
+}
