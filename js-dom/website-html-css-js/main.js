@@ -140,3 +140,19 @@ const renderList = (animes) => {
 
 getAnimeListAPI() // es una promesa y las promesas tiene .then/.catch
   .then(renderList);
+
+/* --- eventos --- */
+const form = document.getElementById('search-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const inputValue = event.target.search.value;
+  console.log(event.target.search.validity);
+  if (!event.target.search.validity.valid) {
+    // todo error
+    form.classList.add('error');
+  } else {
+    // filtrar usando el API
+    form.classList.remove('error');
+  }
+});
