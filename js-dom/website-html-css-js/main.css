@@ -164,4 +164,39 @@ body {
 		left: 500px;
 	}
 }
+/* --- section form --- */
+.section-form {
+  margin-bottom: 20px;
+}
 
+.section-form h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.section-form .input-container {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+	max-width: 400px;
+}
+
+.section-form .input-container .search-label {
+	margin-bottom: 10px;
+}
+
+#search {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.section-form input[type="submit"] {
+	color: var(--main-white-color);
+	background-color: var(--main-primary-color);
+	border: none;
+	border-radius: 5px;
+	box-shadow: none;
+	padding: 10px 12px;
+}
