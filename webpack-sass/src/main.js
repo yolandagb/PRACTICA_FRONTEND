@@ -1,4 +1,3 @@
-import './reset.scss';
 import './main.scss';
 // common JS -> la que se usa en node.js
 const constant = require('./constants');

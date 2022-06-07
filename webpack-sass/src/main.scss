@@ -1,3 +1,6 @@
+@import './reset';
+@import './responsive';
+
 :root {
 	--main-primary-color: #4c4ae6;
 	--main-white-color: #FFF;
@@ -58,53 +61,65 @@ body {
 	rem -> normalmente para las font-size
 	em -> para espaciados
 */
-.shows-container h2 {
-	font-size: 1rem;
-	font-weight: 700;
-	margin-bottom: 10px;
+.shows-container {
+	h2 {
+		font-size: 1rem;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	.show-items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em;
+		/* solucion con flexbox */
+		/* display: flex;
+		flex-wrap: wrap; */
+		/* justify-content: space-between; */
+		@include desktop {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.show-item {
+		.image-container {
+			margin-bottom: 10px;
+			max-height: 192px;
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include desktop {
+		width: 80%;
+	}
 }
 
-.shows-container .show-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1em;
-	/* solucion con flexbox */
-	/* display: flex;
-	flex-wrap: wrap; */
-	/* justify-content: space-between; */
-}
-
-.show-items .show-item {
+// .show-items .show-item {
 	/* solucion con calc */
 	/* width: calc(50% - 10px);
 	margin-right: 5px; */
 	/* solucion con justify content */
 	/* width: 30%; */
-}
-
-.show-item .image-container {
-	margin-bottom: 10px;
-	max-height: 192px;
-	overflow: hidden;
-}
-
-.shows-container .show-item .image-container img {
-	width: 100%;
-}
+// }
 /* -- aside -- */
 .summary {
 	padding: 10px;
 	background-color: rgb(62, 62, 62);
 	color: var(--main-white-color);
 	border-radius: 5px;
+	@include desktop {
+		cursor: pointer;
+		&:hover {
+			background-color: rgb(32, 32, 32);
+		}
+	}
 }
 
 .anime-list {
 	margin: 10px 0 20px 0;
-}
-
-.anime-list li {
-	padding: 5px 0;
+	li {
+		padding: 5px 0;
+	}
 }
 
 /* --- media queries --- */
@@ -115,18 +130,6 @@ body {
 	}
 	.aside {
 		width: 15%;
-	}
-	.shows-container {
-		width: 80%;
-	}
-	.shows-container .show-items {
-		grid-template-columns: repeat(4, 1fr);
-	}
-	.summary {
-		cursor: pointer;
-	}
-	.summary:hover {
-		background-color: rgb(32, 32, 32);
 	}
 }
 
