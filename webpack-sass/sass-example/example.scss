@@ -1,0 +1,38 @@
+
+/* comentario css */
+// comentario scss
+
+// variables
+$primary-color: #333;
+$font-stack: Helvetica, sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+
+// nesting
+.navbar {
+    display: fixed;
+    > div {
+        padding: 40px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        li {
+            padding: 10px;
+        }
+    }
+    
+    &.open {
+        display: block;
+    }
+    
+    a {
+        text-decoration: none;
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
