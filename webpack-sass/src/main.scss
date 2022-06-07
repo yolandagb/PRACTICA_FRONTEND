@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import './reset';
 @import './responsive';
 
@@ -102,15 +103,16 @@ body {
 	/* width: 30%; */
 // }
 /* -- aside -- */
+$BackgroundSummaryColor: rgb(62, 62, 62);
 .summary {
 	padding: 10px;
-	background-color: rgb(62, 62, 62);
+	background-color: $BackgroundSummaryColor;
 	color: var(--main-white-color);
 	border-radius: 5px;
 	@include desktop {
 		cursor: pointer;
 		&:hover {
-			background-color: rgb(32, 32, 32);
+			background-color: color.scale($BackgroundSummaryColor, $lightness: -30%);
 		}
 	}
 }
