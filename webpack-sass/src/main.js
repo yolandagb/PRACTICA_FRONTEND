@@ -1,5 +1,11 @@
+import './reset.css';
+import './main.css';
+// common JS -> la que se usa en node.js
+const constant = require('./constants');
+// ESmodules -> React, Angular, Vue
+import constants, { newVariable } from './constants';
 
-const fromFile = 'Hello world!!!';
+console.log('esmodule', constants, newVariable);
 // Selectors
 const items = document.querySelectorAll('.show-item');
 const showItems = document.getElementsByClassName('show-item');
