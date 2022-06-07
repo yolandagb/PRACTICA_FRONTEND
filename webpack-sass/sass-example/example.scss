@@ -36,3 +36,80 @@ body {
     }
 }
 
+$sizes: 40px, 50px, 80px;
+
+@each $size in $sizes {
+    .w-#{$size} {
+        width: $size;
+    }
+}
+
+// funciones
+@function calculateRem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+.foo-example {
+    margin: calculateRem(28);
+}
+// calculateRem(16) -> 1rem
+
+// mixin & extend
+@mixin theme($themeColor) {
+    background-color: $themeColor;
+    box-shadow: 0 0 1px rgba($themeColor, 0.25);
+}
+
+.content {
+    @include theme(blue);
+    &.dark-mode {
+        @include theme(black);
+    }
+}
+
+%flex-clasic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    @extend %flex-clasic;
+}
+$Black: black;
+%default-color-regular {
+    color: $Black;
+    font-weight: normal;
+}
+%h1-title {
+    @extend %default-color-regular;
+    font-size: calculateRem(36);
+}
+
+.main-title {
+    @extend %h1-title;
+}
+
+// Mixin / content
+@mixin tablet {
+    @media (min-width: 760px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+.footer {
+    text-align: center;
+    @include tablet {
+        text-align: left;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+
+
