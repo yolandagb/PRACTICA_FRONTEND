@@ -1,5 +1,5 @@
-import './reset.css';
-import './main.css';
+import './reset.scss';
+import './main.scss';
 // common JS -> la que se usa en node.js
 const constant = require('./constants');
 // ESmodules -> React, Angular, Vue
