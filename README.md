@@ -1,2 +1,2 @@
 # curso-frontedn
-Repositorio con las clases de los módulos HTML, CSS, Javascript y Javascript frontend
+Repositorio con las respuestas de la practica de todos los módulos de FRONT-END
