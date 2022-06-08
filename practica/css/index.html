@@ -11,6 +11,12 @@
       remove the default styles for the ul list and the <a> links
     */
 
+    ul,a {
+      margin: 0;
+      text-decoration:none;
+      color: black;
+    }
+
     /* --- end exercise 1 --- */
 
     /*
@@ -21,7 +27,19 @@
       Include a hover state to change the color (maybe to a bit darker)
       Include a linear transition for that hover state 
     */
+    button {
 
+      background-color: blueviolet;
+      border-radius: 50%;
+      padding:  10px 10px 10px 10px;
+      color:pink;
+    }
+
+    button:hover {
+      color:black;
+      background-color: white;
+      /* transition: background-color 0.5s ease-in 0.3s; */
+    }
     /* --- end exercise 2 --- */
 
     /*
@@ -31,13 +49,16 @@
     .container {
       width: 100vw;
       height: 60vh;
-      background-color: aqua;
+      background-color: rgb(67, 100, 100);
     }
     .item {
       width: 80px;
       height: 80px;
-      background-color: red;
+      background-color: rgb(114, 80, 80);
       margin: 10px;
+      display: grid;
+
+      align-items: center;
     }
     /* --- end exercise 3 --- */
 
@@ -47,8 +68,12 @@
       the main content
     */
     /* add media query here */
+    @media screens and (max-width:1200x) {
     .main-content {
-      /* add solution here */
+      display: flex;
+      background-color: rgb(183, 148, 217);
+		  justify-content: space-between;
+      }
     }
     /* --- end exercise 4 --- */
     /*
@@ -56,6 +81,13 @@
       Based on exercise 3 use a media query to change the display flex to column direction and space-between
       in mobile resolution < 380px
     */
+    @media screens and (max-width: 380px) {
+    .main-content {
+      flex-direction:column;
+		  justify-content: space-between;
+      }
+    }
+
     /* --- end exercise 5 --- */
   </style>
 </head>

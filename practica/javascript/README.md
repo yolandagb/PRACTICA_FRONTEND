@@ -31,7 +31,7 @@ const input = {
 
 const solution = ???
 // add your solution in the console.log
-console.log(solution)
+console.log(paymentMethod.credit-car))
 ```
 
 ## Exercise 2. map
@@ -68,15 +68,14 @@ const input = {
 
 // add you solution here
 
-const expected = [{
-  productId: 'product-1-nl',
-},
-{
-  productId: 'product-2-es',
-},
-{
-  productId: 'product-3-en',
-}]
+const solution1 = input.orders.map(elem => (
+  {
+    productId: elem.productId + elem.storeLocale,
+  } 
+));
+
+console.log(solution1)
+
 ```
 
 ## Exercise 3. filter
@@ -112,6 +111,11 @@ const input = {
 };
 
 // add you solution here
+
+
+const solution2 = input.orders.filter( elem.price > 10);
+
+console.log(solution2);
 
 const expected = {
   name: 'test account',
@@ -169,6 +173,9 @@ const input = {
 };
 
 // add you solution here
+const solutio3 = input.orders.filter((elem)=> elem.price > 10);
+
+console.log(solution2);
 
 const expected = 'product-1, product-2';
 ```
