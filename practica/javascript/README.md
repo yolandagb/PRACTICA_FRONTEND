@@ -113,7 +113,8 @@ const input = {
 // add you solution here
 
 
-const solution2 = input.orders.filter( elem.price > 10);
+let solution2 = input.orders.filter( elem.price > 10);
+input.orders = res;
 
 console.log(solution2);
 
@@ -173,9 +174,10 @@ const input = {
 };
 
 // add you solution here
-const solutio3 = input.orders.filter((elem)=> elem.price > 10);
-
-console.log(solution2);
+let solution3 = input.orders.filter((item)=> item.price > 10);
+let res = solution3.map(item => item.productId);
+let res1 = res.join (",");
+console.log(res1);
 
 const expected = 'product-1, product-2';
 ```
@@ -213,6 +215,18 @@ const input = {
 };
 
 // add you solution here
+let prices = input.orders.map(item => item.price);
+
+console.log(prices);
+
+function suma(a, b){return a+b;}
+
+let sum = prices.reduce(suma);
+console.log(sum);
+
+input.priceSum=sum;
+console.log(input);
+
 
 const expected = {
   totalPrice: 39,
